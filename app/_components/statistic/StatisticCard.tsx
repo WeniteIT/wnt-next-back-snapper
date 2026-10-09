@@ -13,13 +13,13 @@ export default function StatisticCard({ result, label, content }: IProps) {
   return (
     <div
       title={result?.name?.join(",")}
-      className="flex flex-col gap-4 secondary-lighter rounded-lg shadow-md flex-1 relative overflow-hidden"
+      className="flex flex-col gap-4 secondary-lighter rounded-lg shadow-md flex-1 relative overflow-hidden "
     >
-      <div className="flex">
-        <div className="text-normal grow p-2 md:p-2 md:px-5 whitespace-nowrap flex-1 overflow-hidden">
-          {label}
+      <div className="min-h-10 flex">
+        <div className="text-normal grow md:px-5 whitespace-nowrap flex-1 overflow-hidden flex items-center">
+          <span>{label}</span>
         </div>
-        <div className="flex text-normal secondary font-medium flex-1 pl-2 pr-4 md:pr-5 items-center relative justify-between">
+        <div className="flex text-normal secondary font-small flex-1 pl-2 pr-4 md:pr-5 items-center relative justify-between">
           <div className="flex secondary px-2 skew-x-16 absolute -left-2 top-0 bottom-0" />
           {result ? (
             <>
@@ -38,7 +38,7 @@ export default function StatisticCard({ result, label, content }: IProps) {
               <_AnimatedNumber num={result.num} />
             </>
           ) : (
-              <div className="pl-1 w-full">{content}</div>
+            <div className="pl-1 w-full">{content}</div>
           )}
         </div>
       </div>

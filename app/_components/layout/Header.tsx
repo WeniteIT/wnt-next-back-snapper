@@ -11,9 +11,9 @@ function Title() {
     <Link className="flex items-center flex-1" href="/">
       <div className="flex gap-1 items-center">
         <div className="primary flex rounded-md px-2 items-center ">
-          <TbSoccerField className="text-2xl md:text-4xl" /> Back
+          <TbSoccerField className="text-2xl md:text-4xl" /> Kicker
         </div>
-        <div className="text-normal">SNAPPER</div>
+        <div className="text-normal">Ticker</div>
       </div>
     </Link>
   );

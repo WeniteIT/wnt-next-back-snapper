@@ -8,7 +8,7 @@
 }
 
 .text-gold {
-  @apply text-yellow-500;
+  @apply text-yellow-300;
 }
 
 .text-silver {
@@ -20,7 +20,7 @@
 }
 
 .success {
-  @apply bg-green-600 text-zinc-800;
+  @apply bg-lime-600 text-zinc-800;
 }
 
 .failure {
@@ -28,11 +28,11 @@
 }
 
 .outline-success {
-  @apply outline-green-600;
+  @apply outline-lime-600;
 }
 
 .text-success {
-  @apply text-green-600;
+  @apply text-lime-600;
 }
 
 .text-failure {
@@ -48,27 +48,27 @@
 }
 
 .text-normal {
-  @apply text-lg md:text-2xl;
+  @apply text-lg md:text-xl;
 }
 
 .text-large {
-  @apply text-xl md:text-3xl;
+  @apply text-xl md:text-2xl;
 }
 
 .text-biig {
-  @apply text-2xl md:text-4xl;
+  @apply text-2xl md:text-3xl;
 }
 
 .primary {
-  @apply bg-yellow-500 text-zinc-800;
+  @apply bg-lime-300 text-zinc-800;
 }
 
 .primary-light {
-  @apply bg-yellow-300 text-zinc-800;
+  @apply bg-lime-200 text-zinc-800;
 }
 
 .primary-transparent {
-  @apply bg-yellow-500/5 text-zinc-800;
+  @apply bg-lime-300/5 text-zinc-800;
 }
 
 .secondary-transparent {
@@ -76,11 +76,11 @@
 }
 
 .hover-primary {
-  @apply hover:bg-yellow-500 hover:text-zinc-800;
+  @apply hover:bg-lime-300 hover:text-zinc-800;
 }
 
 .primary-text {
-  @apply text-yellow-500;
+  @apply text-lime-300;
 }
 
 .secondary-root {
@@ -120,7 +120,7 @@
 }
 
 .primary-border-color {
-  @apply border-yellow-400;
+  @apply border-lime-400;
 }
 
 /* @media (prefers-color-scheme: dark) { */
@@ -131,7 +131,7 @@
   }
 
   .primary-transparent {
-    @apply bg-yellow-500/2 text-zinc-800;
+    @apply bg-lime-300/2 text-zinc-800;
   }
 
   .secondary-transparent {
@@ -143,11 +143,11 @@
   }
 
   .primary-border-color {
-    @apply border-yellow-600;
+    @apply border-lime-600;
   }
 
   .success {
-    @apply bg-green-900 text-zinc-100;
+    @apply bg-lime-900 text-zinc-100;
   }
 
   .failure {
@@ -155,7 +155,7 @@
   }
 
   .text-success {
-    @apply text-green-700;
+    @apply text-lime-700;
   }
 
   .text-failure {
@@ -163,7 +163,7 @@
   }
 
   .outline-success {
-    @apply outline-green-900;
+    @apply outline-lime-900;
   }
 
   .outline-failure {
@@ -179,7 +179,7 @@
   }
 
   .secondary-light {
-    @apply bg-linear-to-bl from-zinc-700 to-zinc-900 text-zinc-100;
+    @apply bg-linear-to-bl from-zinc-700 to-zinc-800 text-zinc-100;
   }
 
   .secondary-lighter {
@@ -199,7 +199,7 @@
   }
 
   .secondary-border {
-    @apply border border-zinc-700;
+    @apply border-t-5 border-lime-800;
   }
 /* } */
 

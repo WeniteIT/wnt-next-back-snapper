@@ -41,7 +41,7 @@ export default function MatchCard({ match }: IProps) {
       <div
         className={
           "min-w-6 flex justify-center " +
-          (match.player2.score < match.player1.score ? "primary-text" : "")
+          (match.player2.score < match.player1.score ? "text-gold" : "")
         }
       >
         {match.player2.score < match.player1.score ? (
@@ -54,7 +54,7 @@ export default function MatchCard({ match }: IProps) {
       <div
         className={
           "min-w-6 flex justify-center " +
-          (match.player2.score > match.player1.score ? "primary-text" : "")
+          (match.player2.score > match.player1.score ? "text-gold" : "")
         }
       >
         {match.player2.score > match.player1.score ? (
@@ -87,7 +87,7 @@ export default function MatchCard({ match }: IProps) {
   );
 
   return (
-    <div className="flex gap-4 secondary-lighter rounded-lg shadow-md flex-1 relative overflow-hidden justify-between max-h-12">
+    <div className="flex gap-4 secondary-lighter rounded-lg shadow-md flex-1 relative overflow-hidden justify-between max-h-10">
       <div className="flex text-normal items-center grow p-2 pr-5 overflow-hidden">
         <div className="flex pr-4 pl-2 secondary-text-lighter md:min-w-14">
           {match.id}

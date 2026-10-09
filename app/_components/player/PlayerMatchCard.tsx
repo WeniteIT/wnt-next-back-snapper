@@ -132,7 +132,7 @@ export default function PlayerMatchCard({ match, player, prevMatch }: IProps) {
 
   return (
     <div
-      className={`flex gap-1 secondary-lighter rounded-lg shadow-md flex-1 relative overflow-hidden justify-between max-h-12 outline ${
+      className={`flex gap-1 secondary-lighter rounded-lg shadow-md flex-1 relative overflow-hidden justify-between max-h-10 outline ${
         isPlayerOne
           ? match.player1.score > match.player2.score
             ? "outline-success"

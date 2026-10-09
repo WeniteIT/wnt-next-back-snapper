@@ -52,6 +52,11 @@ export function PlayerPlayAgainst({
     ...Object.values(collectedCountWinnedAgainst).filter((count) => count > 0)
   );
 
+  const highestCountOfCounts = Math.max(
+    highestCount,
+    highestWinnedCount
+  );
+
   return (
     <BaseSection
       label={
@@ -61,34 +66,36 @@ export function PlayerPlayAgainst({
         />
       }
     >
-      <div className="flex gap-1 h-70 max-w-full overflow-x-hidden">
+      <div className="flex h-70 max-w-full overflow-x-hidden ">
         {[...collectedCountPlayedAgainstEntries].map(([opponent, count]) => (
           <div
             key={opponent}
-            className="flex flex-col items-center justify-start p-1 gap-1 rounded-lg grow basis-0 overflow-hidden"
+            className="flex flex-col items-center justify-start p-1 gap-1 rounded-lg grow max-w-24 basis-0 overflow-hidden "
           >
             <div className="secondary-text-light font-bold">
               {collectedCountWinnedAgainst[opponent] || 0}
             </div>
             <div
-              style={{ height: "70px" }}
-              className="flex items-end w-full overflow-hidden secondary rounded-t-lg px-1"
+              style={{ height: "75px" }}
+              className="flex items-end w-full overflow-hidden px-3 secondary rounded-t-lg "
             >
               <div
+                title={`${collectedCountWinnedAgainst[opponent] || 0} wins against ${opponent}`}
                 style={{
                   height:
-                    (highestWinnedCount / 50) *
+                    (70 / highestCountOfCounts) *
                       collectedCountWinnedAgainst[opponent] || 0 + "px",
                 }}
-                className="w-full rounded-t-lg transition-all duration-300 primary-light"
+                className="w-full rounded-t-lg transition-all duration-300 primary-light "
               ></div>
             </div>
             <div
-              style={{ height: "70px" }}
-              className="flex items-start w-full overflow-hidden secondary rounded-b-lg px-1"
+              style={{ height: "75px" }}
+              className="flex items-start w-full overflow-hidden secondary rounded-b-lg px-3"
             >
               <div
-                style={{ height: (highestCount / 50) * count + "px" }}
+                title={`${count} matches against ${opponent}`}
+                style={{ height: (70 / highestCountOfCounts) * count + "px" }}
                 className="w-full primary rounded-b-lg transition-all duration-300"
               ></div>
             </div>

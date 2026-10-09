@@ -18,7 +18,7 @@ import {
 import { _AnimatedNumber } from "../common/_AnimatedNumbers";
 import { useMemo } from "react";
 
-export type TStatisticInfo = "Most Wins" | "Most Losses" | "Highest W/L" | "Lowest W/L" | "Highest Score" | "Lowest Score" | "Win Streak";
+export type TStatisticInfo = "Meiste Siege" | "Meiste Niederlagen" | "Höchste W/L" | "Niedrigste W/L" | "Höchster Punktestand" | "Niedrigster Punktestand" | "Siegeserie";
 interface IProps {
   from?: Date;
   to?: Date;
@@ -80,13 +80,13 @@ export default function StatisticSection({
   }, [data, from, to]);
 
   const StatisticInfoMap: Record<TStatisticInfo, IResult> = {
-    ["Most Wins"]: mostWins,
-    ["Most Losses"]: mostLosses,
-    ["Highest W/L"]: highestWinLoseRatio,
-    ["Lowest W/L"]: lowestWinLoseRatio,
-    ["Highest Score"]: findHighestScore2,
-    ["Lowest Score"]: findLowestScore2,
-    ["Win Streak"]: longestWinStreak,
+    ["Meiste Siege"]: mostWins,
+    ["Meiste Niederlagen"]: mostLosses,
+    ["Höchste W/L"]: highestWinLoseRatio,
+    ["Niedrigste W/L"]: lowestWinLoseRatio,
+    ["Höchster Punktestand"]: findHighestScore2,
+    ["Niedrigster Punktestand"]: findLowestScore2,
+    ["Siegeserie"]: longestWinStreak,
   };
 
   return (
@@ -100,7 +100,7 @@ export default function StatisticSection({
       info={rightLabel}
     >
       <StatisticCard
-        label="Total Matches"
+        label="Anzahl gespielter Matches"
         content={<_AnimatedNumber num={totalMatches} />}
       />
 

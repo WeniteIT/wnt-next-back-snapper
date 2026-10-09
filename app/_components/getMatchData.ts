@@ -61,7 +61,19 @@ export async function getMatchData(): Promise<IMatchData[]> {
 
   const cleanedMatchData = matchData
 
-    .filter((e) => e.player1.name !== "Ole" && e.player2.name !== "Ole")
+    .filter(
+      (e) =>
+        e.player1.name !== "Ole" &&
+        e.player2.name !== "Ole" &&
+        e.player1.name !== "Toni" &&
+        e.player2.name !== "Toni" &&
+        e.player1.name !== "Michi" &&
+        e.player2.name !== "Michi" &&
+        e.player1.name !== "Hossein" &&
+        e.player2.name !== "Hossein" &&
+        e.player1.name !== "Denis" &&
+        e.player2.name !== "Denis"
+    )
     .filter((e) => e.comment?.toUpperCase() !== "DEBUG")
     .filter((e) => e.player1.score !== 0 || e.player2.score !== 0)
     .filter((e) => e.player1.name !== "" && e.player2.name !== "")
@@ -70,7 +82,7 @@ export async function getMatchData(): Promise<IMatchData[]> {
 
   calculateScore(
     cleanedMatchData.sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime() 
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
     )
   );
 

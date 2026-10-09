@@ -33,7 +33,6 @@ export default async function LeaderboardPage() {
   const rating = calculateScore(data);
 
   return (
-  
       <div className="flex flex-col w-full gap-4">
         <BreadCrump label={["Home", "Leaderboard"]} />
         <div className="flex flex-col lg:flex-row w-full gap-2 md:gap-4 ">
@@ -79,7 +78,7 @@ export default async function LeaderboardPage() {
               </>
             </BaseSection>
           </div>
-          <div className="flex flex-col gap-2 md:gap-4 flex-1 md:overflow-hidden  h-full">
+          <div className="flex flex-col gap-2 md:gap-4 flex-1 md:overflow-hidden h-full">
             <BaseSection
               label={
                 <IconText
